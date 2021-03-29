@@ -19,14 +19,9 @@ public class PerformanceService {
         List<Evento> eventos = this.eventoRepository.getEventosByDistanciaAno(distancia, ano);
         
         if(!eventos.isEmpty() && eventos.size() >= 2){
-            for(Evento evento: eventos){
-                System.out.println(evento.toString());
-            }
-            System.out.println("\n===========\n");
+
             EventosUtils.OrdenarEventosPorData(eventos);
-            for(Evento evento: eventos){
-                System.out.println(evento.toString());
-            }
+
             // return new PerformanceDTO(eventos);
         }
         return null;

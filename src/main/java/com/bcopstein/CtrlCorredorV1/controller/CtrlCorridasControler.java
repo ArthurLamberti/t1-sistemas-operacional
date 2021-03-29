@@ -94,8 +94,6 @@ public class CtrlCorridasControler {
             }
         }
         
-        // return performanceService.getPerformance(distancia, ano);
-        System.out.println("SAFWF");
         return new PerformanceDTO(evento1, evento2); 
     }
 }
