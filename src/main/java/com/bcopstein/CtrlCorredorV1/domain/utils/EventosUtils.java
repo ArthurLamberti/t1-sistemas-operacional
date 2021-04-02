@@ -1,9 +1,9 @@
-package com.bcopstein.CtrlCorredorV1.utils;
+package com.bcopstein.CtrlCorredorV1.domain.utils;
 
 import java.sql.Date;
 import java.util.List;
 
-import com.bcopstein.CtrlCorredorV1.models.Evento;
+import com.bcopstein.CtrlCorredorV1.view.models.Evento;
 
 public class EventosUtils {
     public static void OrdenarEventosPorData(List<Evento> eventos) {

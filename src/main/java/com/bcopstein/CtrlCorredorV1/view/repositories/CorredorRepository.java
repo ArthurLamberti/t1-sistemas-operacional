@@ -1,8 +1,8 @@
-package com.bcopstein.CtrlCorredorV1.repositories;
+package com.bcopstein.CtrlCorredorV1.view.repositories;
 
 import java.util.List;
 
-import com.bcopstein.CtrlCorredorV1.models.Corredor;
+import com.bcopstein.CtrlCorredorV1.view.models.Corredor;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;

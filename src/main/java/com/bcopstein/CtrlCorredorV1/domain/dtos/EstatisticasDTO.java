@@ -1,8 +1,8 @@
-package com.bcopstein.CtrlCorredorV1.dtos;
+package com.bcopstein.CtrlCorredorV1.domain.dtos;
 
 import java.util.List;
 
-import com.bcopstein.CtrlCorredorV1.models.Evento;
+import com.bcopstein.CtrlCorredorV1.view.models.Evento;
 
 public class EstatisticasDTO {
 
