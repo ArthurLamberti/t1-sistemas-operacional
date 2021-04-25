@@ -1,4 +1,4 @@
-package com.bcopstein.CtrlCorredorV1.view.models;
+package com.bcopstein.CtrlCorredorV1.negocio.entidades;
 
 public class Corredor {
     private String cpf;
@@ -13,10 +13,6 @@ public class Corredor {
         this.mesDn = mesDn;
         this.anoDn = anoDn;
         this.genero = genero;
-    }
-
-    protected Corredor(){
-
     }
 
     public String getCpf() {

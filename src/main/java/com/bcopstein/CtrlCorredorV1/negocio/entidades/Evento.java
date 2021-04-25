@@ -1,4 +1,4 @@
-package com.bcopstein.CtrlCorredorV1.view.models;
+package com.bcopstein.CtrlCorredorV1.negocio.entidades;
 
 public class Evento {
     private int id;
