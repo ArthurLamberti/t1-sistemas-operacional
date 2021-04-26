@@ -6,11 +6,9 @@ import java.util.stream.StreamSupport;
 
 import com.bcopstein.CtrlCorredorV1.aplicacao.dtos.EstatisticasDTO;
 import com.bcopstein.CtrlCorredorV1.aplicacao.dtos.PerformanceDTO;
-import com.bcopstein.CtrlCorredorV1.negocio.entidades.Evento;
 import com.bcopstein.CtrlCorredorV1.negocio.entidades.EventoJpa;
-import com.bcopstein.CtrlCorredorV1.negocio.repositorios.IEventoRepository;
+
 import com.bcopstein.CtrlCorredorV1.negocio.repositorios.IEventoRepositoryJpa;
-import com.bcopstein.CtrlCorredorV1.negocio.util.EventoUtils;
 import com.bcopstein.CtrlCorredorV1.negocio.util.EventoUtilsJpa;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,18 +16,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ServicoEstatistica {
-    private IEventoRepository eventoRep;
 
+    @Autowired
     private ICalculoEstatistica calculoEstatistica;
 
     @Autowired
     private IEventoRepositoryJpa eventoRepository;
-
-    @Autowired
-    public ServicoEstatistica(IEventoRepository eventoRepository,ICalculoEstatistica calculoEstatistica){
-        this.eventoRep = eventoRepository;
-        this.calculoEstatistica = calculoEstatistica;
-    }
 
     public EstatisticasDTO calculaEstatisticas(int distancia){
         return calculoEstatistica.calculaEstatisticas(distancia);

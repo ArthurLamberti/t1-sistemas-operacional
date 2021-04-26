@@ -8,7 +8,6 @@ import com.bcopstein.CtrlCorredorV1.aplicacao.casosDeUso.ConsultaEventosUC;
 import com.bcopstein.CtrlCorredorV1.aplicacao.casosDeUso.ConsultaPerformanceUC;
 import com.bcopstein.CtrlCorredorV1.aplicacao.dtos.EstatisticasDTO;
 import com.bcopstein.CtrlCorredorV1.aplicacao.dtos.PerformanceDTO;
-import com.bcopstein.CtrlCorredorV1.negocio.entidades.Evento;
 import com.bcopstein.CtrlCorredorV1.negocio.entidades.EventoJpa;
 
 import org.springframework.beans.factory.annotation.Autowired;

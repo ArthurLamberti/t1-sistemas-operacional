@@ -1,6 +1,5 @@
 package com.bcopstein.CtrlCorredorV1.aplicacao.casosDeUso;
 
-import com.bcopstein.CtrlCorredorV1.negocio.entidades.Evento;
 import com.bcopstein.CtrlCorredorV1.negocio.entidades.EventoJpa;
 import com.bcopstein.CtrlCorredorV1.negocio.servicos.ServicoEvento;
 
@@ -9,12 +8,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CadastraEventoUC {
-    private ServicoEvento servicoEvento;
-
     @Autowired
-    public CadastraEventoUC(ServicoEvento servicoEvento) {
-        this.servicoEvento = servicoEvento;
-    }
+    private ServicoEvento servicoEvento;
     
     public boolean cadastrar(EventoJpa evento){
         return servicoEvento.cadastra(evento);

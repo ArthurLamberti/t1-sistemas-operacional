@@ -8,15 +8,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ConsultaPerformanceUC {
-        private ServicoEstatistica servicoEstatistica;
-    
-        @Autowired
-        public ConsultaPerformanceUC(ServicoEstatistica servicoEstatistica) {
-            this.servicoEstatistica = servicoEstatistica;
-        }
-    
-        public PerformanceDTO buscarMelhorPerformace(int distancia,int ano){
-            return servicoEstatistica.calculaAumentoPerformance(distancia, ano);
-        }
+    @Autowired
+    private ServicoEstatistica servicoEstatistica;
+
+    public PerformanceDTO buscarMelhorPerformace(int distancia,int ano){
+        return servicoEstatistica.calculaAumentoPerformance(distancia, ano);
     }
+}
     

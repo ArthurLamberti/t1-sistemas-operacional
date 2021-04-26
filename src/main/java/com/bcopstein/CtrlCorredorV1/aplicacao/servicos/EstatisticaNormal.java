@@ -5,25 +5,17 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 import com.bcopstein.CtrlCorredorV1.aplicacao.dtos.EstatisticasDTO;
-import com.bcopstein.CtrlCorredorV1.negocio.entidades.Evento;
 import com.bcopstein.CtrlCorredorV1.negocio.entidades.EventoJpa;
-import com.bcopstein.CtrlCorredorV1.negocio.repositorios.IEventoRepository;
+
 import com.bcopstein.CtrlCorredorV1.negocio.repositorios.IEventoRepositoryJpa;
-import com.bcopstein.CtrlCorredorV1.negocio.util.EventoUtils;
 import com.bcopstein.CtrlCorredorV1.negocio.util.EventoUtilsJpa;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class EstatisticaNormal implements ICalculoEstatistica {
-    private IEventoRepository eventoRep;
-
-    @Autowired
-    private IEventoRepositoryJpa eventoRepository;
     
     @Autowired
-    public EstatisticaNormal(IEventoRepository eventoRep){
-        this.eventoRep = eventoRep;
-    }
+    private IEventoRepositoryJpa eventoRepository;
 
     public EstatisticasDTO calculaEstatisticas(int distancia){
         

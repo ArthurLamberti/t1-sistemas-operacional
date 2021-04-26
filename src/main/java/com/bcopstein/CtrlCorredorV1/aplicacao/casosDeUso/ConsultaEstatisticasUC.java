@@ -8,12 +8,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ConsultaEstatisticasUC {
-    private ServicoEstatistica servicoEstatistica;
-
     @Autowired
-    public ConsultaEstatisticasUC(ServicoEstatistica servicoEstatistica) {
-        this.servicoEstatistica = servicoEstatistica;
-    }
+    private ServicoEstatistica servicoEstatistica;
 
     public EstatisticasDTO buscarEstatisticas(int distancia){
         return servicoEstatistica.calculaEstatisticas(distancia);

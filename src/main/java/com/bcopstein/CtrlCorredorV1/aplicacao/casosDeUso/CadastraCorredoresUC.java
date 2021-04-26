@@ -1,6 +1,6 @@
 package com.bcopstein.CtrlCorredorV1.aplicacao.casosDeUso;
 
-import com.bcopstein.CtrlCorredorV1.negocio.entidades.Corredor;
+
 import com.bcopstein.CtrlCorredorV1.negocio.entidades.CorredorJpa;
 import com.bcopstein.CtrlCorredorV1.negocio.servicos.ServicoCorredor;
 

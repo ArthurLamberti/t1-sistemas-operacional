@@ -4,9 +4,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-import com.bcopstein.CtrlCorredorV1.negocio.entidades.Evento;
 import com.bcopstein.CtrlCorredorV1.negocio.entidades.EventoJpa;
-import com.bcopstein.CtrlCorredorV1.negocio.repositorios.IEventoRepository;
+
 import com.bcopstein.CtrlCorredorV1.negocio.repositorios.IEventoRepositoryJpa;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,15 +13,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ServicoEvento {
-    private IEventoRepository eventoRep;
 
     @Autowired
     private IEventoRepositoryJpa eventoRepository;
-
-    @Autowired
-    public ServicoEvento(IEventoRepository eventoRep){
-        this.eventoRep = eventoRep;
-    } 
 
     public List<EventoJpa> todos(){
         Iterable<EventoJpa> eventos = eventoRepository.findAll();

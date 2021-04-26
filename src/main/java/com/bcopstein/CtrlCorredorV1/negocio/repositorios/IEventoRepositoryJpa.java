@@ -2,7 +2,6 @@ package com.bcopstein.CtrlCorredorV1.negocio.repositorios;
 
 import java.util.List;
 
-import com.bcopstein.CtrlCorredorV1.negocio.entidades.Evento;
 import com.bcopstein.CtrlCorredorV1.negocio.entidades.EventoJpa;
 
 public interface IEventoRepositoryJpa {

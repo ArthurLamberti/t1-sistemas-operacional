@@ -2,25 +2,26 @@ package com.bcopstein.CtrlCorredorV1.aplicacao.servicos;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 import com.bcopstein.CtrlCorredorV1.aplicacao.dtos.EstatisticasDTO;
-import com.bcopstein.CtrlCorredorV1.negocio.entidades.Evento;
-import com.bcopstein.CtrlCorredorV1.negocio.repositorios.IEventoRepository;
+import com.bcopstein.CtrlCorredorV1.negocio.entidades.EventoJpa;
+
+import com.bcopstein.CtrlCorredorV1.negocio.repositorios.IEventoRepositoryJpa;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class EstatisticaDesconsidera implements ICalculoEstatistica {
-    private IEventoRepository eventoRep;
 
     @Autowired
-    public EstatisticaDesconsidera(IEventoRepository eventoRep) {
-        this.eventoRep = eventoRep;
-    }
+    private IEventoRepositoryJpa eventoRepository;
 
     public EstatisticasDTO calculaEstatisticas(int distancia) {
-        // Seleciona os eventos da distancia informada
-        List<Evento> eventos = eventoRep.todos().stream().filter(e -> e.getDistancia() == distancia)
-                .collect(Collectors.toList());
+       
+        Iterable<EventoJpa> eventosIterable = eventoRepository.findByDistancia(distancia);
+        System.out.println("Buscou");
+        List<EventoJpa> eventos = StreamSupport.stream(eventosIterable.spliterator(), false).collect(Collectors.toList());
+       
         // Obtém um stream com os valores ordenados
         List<Double> valores = eventos.stream()
                 .map(e -> e.getHoras() * 60 * 60 + e.getMinutos() * 60.0 + e.getSegundos()).sorted()

@@ -3,7 +3,6 @@ package com.bcopstein.CtrlCorredorV1.negocio.util;
 import java.sql.Date;
 import java.util.List;
 
-import com.bcopstein.CtrlCorredorV1.negocio.entidades.Evento;
 import com.bcopstein.CtrlCorredorV1.negocio.entidades.EventoJpa;
 
 public class EventoUtilsJpa {
