@@ -3,6 +3,7 @@ package com.bcopstein.CtrlCorredorV1.aplicacao.casosDeUso;
 import java.util.List;
 
 import com.bcopstein.CtrlCorredorV1.negocio.entidades.Corredor;
+import com.bcopstein.CtrlCorredorV1.negocio.entidades.CorredorJpa;
 import com.bcopstein.CtrlCorredorV1.negocio.servicos.ServicoCorredor;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class ConsultaCorredoresUC {
         this.servicoCorredor = servicoCorredor;
     }
     
-    public List<Corredor> buscar(){
+    public List<CorredorJpa> buscar(){
         return servicoCorredor.todos();
     }    
 }

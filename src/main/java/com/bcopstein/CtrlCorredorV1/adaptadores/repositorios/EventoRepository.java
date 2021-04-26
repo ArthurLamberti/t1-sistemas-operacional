@@ -20,10 +20,10 @@ public class EventoRepository implements IEventoRepository{
         this.jdbcTemplate.execute("CREATE TABLE eventos("
                 + "id int, nome VARCHAR(255), dia int, mes int, ano int, distancia int, horas int, minutos int, segundos int,PRIMARY KEY(id))");
         // Insere eventos
-        cadastra(new Evento(1,"Poa Day Run",22,5,2019,5,0,35,32));
-        cadastra(new Evento(2,"Poa Night Run",12,6,2019,5,0,31,10));
-        cadastra(new Evento(3,"Winter Day Run",9,7,2019,5,0,29,17));
-        cadastra(new Evento(4,"Summer Night Run",18,12,2019,5,0,32,25));
+        // cadastra(new Evento(1,"Poa Day Run",22,5,2019,5,0,35,32));
+        // cadastra(new Evento(2,"Poa Night Run",12,6,2019,5,0,31,10));
+        cadastra(new Evento(3,"Winter Day Run",9,7,2019,5,0,30,17));
+        // cadastra(new Evento(4,"Summer Night Run",18,12,2019,5,0,32,25));
     }  
 
     public List<Evento> todos() {

@@ -9,6 +9,7 @@ import com.bcopstein.CtrlCorredorV1.aplicacao.casosDeUso.ConsultaPerformanceUC;
 import com.bcopstein.CtrlCorredorV1.aplicacao.dtos.EstatisticasDTO;
 import com.bcopstein.CtrlCorredorV1.aplicacao.dtos.PerformanceDTO;
 import com.bcopstein.CtrlCorredorV1.negocio.entidades.Corredor;
+import com.bcopstein.CtrlCorredorV1.negocio.entidades.CorredorJpa;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -32,13 +33,13 @@ public class CorredorController {
 
   @PostMapping
   @CrossOrigin(origins = "*")
-  public boolean atualizarCorredor(@RequestBody final Corredor corredor){
+  public boolean atualizarCorredor(@RequestBody final CorredorJpa corredor){
     return cadastraCorredoresUC.cadastrar(corredor);
   }
 
   @GetMapping
   @CrossOrigin(origins = "*")
-  public List<Corredor> buscarCorredor(){
+  public List<CorredorJpa> buscarCorredor(){
     return consultaCorredoresUC.buscar();
   }  
 }

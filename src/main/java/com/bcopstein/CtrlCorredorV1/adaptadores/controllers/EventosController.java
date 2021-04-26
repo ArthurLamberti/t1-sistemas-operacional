@@ -9,6 +9,7 @@ import com.bcopstein.CtrlCorredorV1.aplicacao.casosDeUso.ConsultaPerformanceUC;
 import com.bcopstein.CtrlCorredorV1.aplicacao.dtos.EstatisticasDTO;
 import com.bcopstein.CtrlCorredorV1.aplicacao.dtos.PerformanceDTO;
 import com.bcopstein.CtrlCorredorV1.negocio.entidades.Evento;
+import com.bcopstein.CtrlCorredorV1.negocio.entidades.EventoJpa;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -37,14 +38,14 @@ public class EventosController {
 
   @PostMapping
   @CrossOrigin(origins = "*")
-  public boolean cadastrarEvento(@RequestBody final Evento evento) {
+  public boolean cadastrarEvento(@RequestBody final EventoJpa evento) {
     return cadastraEventoUC.cadastrar(evento);
   }
 
 
   @GetMapping
   @CrossOrigin(origins = "*")
-  public List<Evento> listarEventos(){
+  public List<EventoJpa> listarEventos(){
     return consultaEventosUC.listar();
   }
 

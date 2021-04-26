@@ -3,6 +3,7 @@ package com.bcopstein.CtrlCorredorV1.aplicacao.casosDeUso;
 import java.util.List;
 
 import com.bcopstein.CtrlCorredorV1.negocio.entidades.Evento;
+import com.bcopstein.CtrlCorredorV1.negocio.entidades.EventoJpa;
 import com.bcopstein.CtrlCorredorV1.negocio.servicos.ServicoEvento;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class ConsultaEventosUC {
         this.servicoEvento = servicoEvento;
     }
     
-    public List<Evento> listar(){
+    public List<EventoJpa> listar(){
         return servicoEvento.todos();
     }    
     

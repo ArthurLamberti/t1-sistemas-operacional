@@ -1,12 +1,33 @@
 package com.bcopstein.CtrlCorredorV1.negocio.entidades;
 
-public class Corredor {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity(name = "corredores")
+// @Table(name = "CORREDORES")
+public class CorredorJpa {
+    @Id
+    @Column(name = "cpf")
     private String cpf;
+    
+    @Column(name = "NOME")
     private String nome;
-    private int diaDn,mesDn,anoDn;
+    
+    @Column(name = "DIADN")
+    private int diaDn;
+
+    @Column(name = "MESDN")
+    private int mesDn;
+
+    @Column(name = "ANODN")
+    private int anoDn;
+
+    @Column(name = "GENERO")
     private String genero;
 
-    public Corredor(String cpf, String nome, int diaDn,int mesDn,int anoDn, String genero) {
+    public CorredorJpa(String cpf, String nome, int diaDn,int mesDn,int anoDn, String genero) {
         this.cpf = cpf;
         this.nome = nome;
         this.diaDn = diaDn;
@@ -15,7 +36,7 @@ public class Corredor {
         this.genero = genero;
     }
 
-    protected Corredor(){}
+    protected CorredorJpa(){}
 
     public String getCpf() {
         return cpf;
